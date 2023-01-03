@@ -16,5 +16,11 @@ public class ExpenseServiceImpl implements ExpenseService {
 	public List<Todo> findAll() {
 		return expenseRepository.findAll();
 	}
+	
+    @Override
+    public Todo save(Todo expense) {
+        expenseRepository.save(expense);
+        return expense;
+    }
 
 }
